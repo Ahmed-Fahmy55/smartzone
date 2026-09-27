@@ -155,7 +155,8 @@
       guidePdf: 'docs/ShopManagement-User-Guide.pdf', privacy: 'privacy.html',
       extraDocs: [
         { href: 'docs/ShopManagement-GoogleDrive-Backup.pdf', ar: 'النسخ الاحتياطي على ⁦Google Drive⁩ (PDF)', en: 'Google Drive backup (PDF)' },
-        { href: 'docs/ShopManagement-Excel-Import.pdf', ar: 'استيراد المديونية من ⁦Excel⁩ (PDF)', en: 'Excel debt import (PDF)' }
+        { href: 'docs/ShopManagement-Excel-Import.pdf', ar: 'استيراد المديونية من ⁦Excel⁩ (PDF)', en: 'Excel debt import (PDF)' },
+        { href: 'docs/ShopManagement-Branches.pdf', ar: 'تشغيل أكتر من كاشير أو فرع (PDF)', en: 'Several tills or branches (PDF)' }
       ],
       ar: {
         kind: 'إدارة المحل', forWho: 'للمحلات', tagline: 'كاشير ومخزون ومديونية في برنامج واحد',
