@@ -18,7 +18,7 @@
       heroEyebrow: 'برامج ويندوز للمحلات والجيمات',
       heroTitle: 'برامج بسيطة تدير شغلك، حتى لو النت قطع',
       heroSub: 'سمارت زون بتعمل برامج عربي لأصحاب المحلات والجيمات في مصر. بياناتك على جهازك، ونسخة احتياطية على درايفك، والدعم على واتساب.',
-      heroShotAlt: 'مكان صورة شاشة البيع في ⁦Z Shop⁩',
+      heroShotAlt: 'شاشة البيع في ⁦Z Shop⁩',
       trust: ['شغّال من غير نت', 'جرّب 7 أيام ببلاش', 'دعم على واتساب'],
       productsEyebrow: 'برامجنا', productsTitle: 'اختار البرنامج اللي يناسب شغلك',
       downloadFree: 'حمّل ببلاش', learnMore: 'اعرف أكتر', soon: 'قريباً',
@@ -76,7 +76,7 @@
       waHello: 'أهلاً سمارت زون، عندي سؤال', waMore: 'أهلاً، أنا عندي نشاط: ', waBranches: 'أهلاً، عايز أعرف عن إضافة الفروع في Z Shop',
       waAct: function (n) { return 'أهلاً، عايز أفعّل ' + n + '. كود الجهاز: '; },
       dlLabel: function (n) { return 'حمّل ' + n; }, dsSub: function (n) { return 'بيتحمّل ' + n + ' دلوقتي.'; }, backLabel: function (n) { return 'صفحة ' + n; },
-      heroAlt: function (n) { return 'مكان صورة من ' + n; }
+      heroAlt: function (n) { return 'الشاشة الرئيسية في ' + n; }
     },
     en: {
       navLabel: 'Main menu', home: 'Home', contact: 'Contact', privacy: 'Privacy policy',
@@ -86,7 +86,7 @@
       heroEyebrow: 'Windows apps for shops and gyms',
       heroTitle: 'Simple software that runs your business, even offline',
       heroSub: 'Arabic Windows apps for shops and gyms in Egypt. Your data stays on your PC, backups go to your Drive, and support is on WhatsApp.',
-      heroShotAlt: 'Z Shop point-of-sale screenshot placeholder',
+      heroShotAlt: 'The Z Shop selling screen',
       trust: ['Works offline', '7-day free trial', 'WhatsApp support'],
       productsEyebrow: 'Products', productsTitle: 'Pick the app for your business',
       downloadFree: 'Download free', learnMore: 'Learn more', soon: 'Coming soon',
@@ -144,13 +144,14 @@
       waHello: 'Hi Smart Zone, I have a question', waMore: 'Hi, my business is: ', waBranches: 'Hi, I want to know about the Z Shop branches add-on',
       waAct: function (n) { return 'Hi, I want to activate ' + n + '. Device code: '; },
       dlLabel: function (n) { return 'Download ' + n; }, dsSub: function (n) { return n + ' is downloading now.'; }, backLabel: function (n) { return 'Back to ' + n; },
-      heroAlt: function (n) { return n + ' screenshot placeholder'; }
+      heroAlt: function (n) { return 'The ' + n + ' main screen'; }
     }
   };
 
   var PRODUCTS = [
     {
-      id: 'shop', name: 'Z Shop', repo: 'Ahmed-Fahmy55/ShopManagement-Releases', exe: 'ShopManagement.exe', icon: 'storefront',
+      id: 'shop', name: 'Z Shop', repo: 'Ahmed-Fahmy55/ShopManagement-Releases', exe: 'ShopManagement.exe', icon: 'storefront', hero: 'dashboard',
+      shots: ['pos-cart', 'products', 'lowstock', 'debts', 'stats', 'suppliers'],
       guidePdf: 'docs/ShopManagement-User-Guide.pdf', privacy: 'privacy.html',
       extraDocs: [
         { href: 'docs/ShopManagement-GoogleDrive-Backup.pdf', ar: 'النسخ الاحتياطي على ⁦Google Drive⁩ (PDF)', en: 'Google Drive backup (PDF)' },
@@ -170,7 +171,7 @@
           { icon: 'badge', t: 'المستخدمين', items: ['مدير وكاشير، والدخول بـ ⁦PIN⁩', 'لو نسيت ⁦PIN⁩ المدير، ترجّعه بمفتاح من سمارت زون', 'ثيم فاتح أو غامق لكل كاشير'] }
         ],
         hardware: ['طابعات فواتير حرارية 58 و 80 مم', 'قارئ باركود', 'طابعة ليبلز باركود'],
-        gallery: ['شاشة البيع', 'فاتورة 80 مم', 'المخزون', 'المديونية', 'الإحصائيات', 'الفروع'],
+        gallery: ['شاشة البيع', 'المنتجات والمخزون', 'نواقص المخزون', 'مديونية العملاء', 'الإحصائيات', 'حساب المورد'],
         mb: { title: 'عندك أكتر من فرع؟', sub: 'إضافة الكاشيرات المتعددة والفروع: كذا كاشير في نفس المحل، أو كذا فرع، كلهم متزامنين عن طريق سحابة سمارت زون.', items: ['مخزن رئيسي، وتحويلات بضاعة بين الفروع والمخزن', 'تشوف أي فرع أو كل الفروع مع بعض: الرئيسية، المخزون، المبيعات، المديونيات، المصاريف، الإحصائيات', 'البيع شغّال من غير نت، ويتزامن لما النت يرجع', 'كل فرع بيبيع بس المنتجات اللي عنده', 'لو جهاز ضاع، يترجّع من السيرفر'], branches: ['فرع 1', 'فرع 2', 'فرع 3'], cloud: 'سحابة سمارت زون', warehouse: 'المخزن الرئيسي', caption: 'كل فرع بيبيع أوفلاين ويتزامن لما النت يرجع' }
       },
       en: {
@@ -187,12 +188,13 @@
           { icon: 'badge', t: 'Users', items: ['Admin and cashier with PIN login', 'Admin PIN recovery key', 'Light or dark theme per till'] }
         ],
         hardware: ['58 / 80 mm thermal receipt printers', 'Barcode scanners', 'Barcode label printers'],
-        gallery: ['Selling screen', '80 mm receipt', 'Stock', 'Credit', 'Statistics', 'Branches'],
+        gallery: ['Selling screen', 'Products and stock', 'Low stock', 'Customer credit', 'Statistics', 'Supplier account'],
         mb: { title: 'Several branches?', sub: 'The multi-till and multi-branch add-on syncs every till and branch through Smart Zone’s cloud.', items: ['Main warehouse and stock transfers', 'See one branch or all together', 'Sells offline, syncs when back online', 'Each branch sells only its own products', 'Restore a lost PC from the server'], branches: ['Branch 1', 'Branch 2', 'Branch 3'], cloud: 'Smart Zone cloud', warehouse: 'Main warehouse', caption: 'Each branch sells offline and syncs later' }
       }
     },
     {
-      id: 'gym', name: 'Z Gym', repo: 'Ahmed-Fahmy55/ZGym-Releases', exe: 'GymManager.exe', icon: 'fitness_center',
+      id: 'gym', name: 'Z Gym', repo: 'Ahmed-Fahmy55/ZGym-Releases', exe: 'GymManager.exe', icon: 'fitness_center', hero: 'dashboard',
+      shots: ['checkin-ok', 'members', 'payments', 'employees', 'supplements', 'reports'],
       guidePdf: 'docs/ZGym-User-Guide.pdf', privacy: 'gym/privacy.html', extraDocs: [],
       ar: {
         kind: 'إدارة الجيم', forWho: 'للجيمات', tagline: 'اشتراكات وبوابات وموظفين في برنامج واحد',
@@ -213,7 +215,7 @@
           { icon: 'backup', t: 'نسخة احتياطية على ⁦Google Drive⁩', badge: 'قريباً', items: ['نسخة يومية على درايفك، وترجيع بضغطة على جهاز جديد'] }
         ],
         hardware: ['بوابات وأبواب وأجهزة بصمة ⁦ZKTeco⁩', 'بوابات وأبواب ⁦Hikvision⁩', 'قارئ ⁦QR⁩ أو باركود', 'طابعة حرارية للإيصالات'],
-        gallery: ['شاشة الدخول', 'بروفايل مشترك', 'الاشتراكات', 'كارت العضوية', 'الموظفين', 'التقارير']
+        gallery: ['تسجيل الحضور', 'الأعضاء والاشتراكات', 'المدفوعات والتجديدات', 'الموظفين', 'المكملات والمبيعات', 'التقارير']
       },
       en: {
         kind: 'Gym management', forWho: 'for gyms', tagline: 'Memberships, turnstiles and staff in one app',
@@ -234,7 +236,7 @@
           { icon: 'backup', t: 'Google Drive backup', badge: 'Soon', items: ['Daily copies and one-click restore'] }
         ],
         hardware: ['ZKTeco turnstiles, doors, fingerprint', 'Hikvision turnstiles and doors', 'QR / barcode scanners', 'Thermal receipt printers'],
-        gallery: ['Check-in', 'Member profile', 'Subscriptions', 'Membership card', 'Staff', 'Reports']
+        gallery: ['Check-in', 'Members & subscriptions', 'Payments & renewals', 'Staff', 'Supplements shop', 'Reports']
       }
     }
   ];
@@ -360,9 +362,10 @@
   }
 
   // ---------- shared blocks ----------
-  function windowFrame(name, alt, ph) {
+  var img = function (app, file, size) { return href('assets/img/' + app + '/' + file + (size === 'sm' ? '-sm' : '') + '.jpg'); };
+  function windowFrame(name, alt, src) {
     return '<div class="window"><div class="window-bar"><i></i><i></i><i></i><span>' + esc(name) + '</span></div>' +
-      '<div class="shot" role="img" aria-label="' + esc(alt) + '">' + esc(ph) + '</div></div>';
+      '<div class="shot"><img src="' + src + '" alt="' + esc(alt) + '" width="1440" height="743" fetchpriority="high"></div></div>';
   }
   function dlLink(p, cls, label, iconSize) {
     return '<a class="' + cls + '" href="' + dlUrl(p) + '" data-dl="' + p.id + '">' + ic('download', iconSize ? 'font-size:' + iconSize + 'px' : '') + esc(label) + '</a>';
@@ -383,7 +386,7 @@
           }) + '</div>' +
           '<ul class="checks">' + map(t.trust, function (x) { return '<li>' + ic('check_circle') + esc(x) + '</li>'; }) + '</ul>' +
         '</div>' +
-        '<div class="hero-shot">' + windowFrame('Z Shop', t.heroShotAlt, 'screenshot · Z Shop POS screen (1600×1000)') + '</div>' +
+        '<div class="hero-shot">' + windowFrame('Z Shop', t.heroShotAlt, img('shop', 'pos-cart')) + '</div>' +
       '</section>' +
 
       '<section id="products" class="wrap" style="padding-top:clamp(24px,4vw,48px);padding-bottom:clamp(56px,8vw,112px)">' +
@@ -475,7 +478,7 @@
             '<p class="dl-note">' + esc(t.dlNote) + '</p></div>' +
           '<div class="doc-links">' + docs + '</div>' +
         '</div>' +
-        '<div class="hero-shot" style="flex-basis:460px">' + windowFrame(p.name, t.heroAlt(p.name), 'screenshot · ' + p.name + ' main screen (1600×1000)') + '</div>' +
+        '<div class="hero-shot" style="flex-basis:460px">' + windowFrame(p.name, t.heroAlt(p.name), img(p.id, p.hero)) + '</div>' +
       '</section>' +
 
       '<section class="band"><div class="wrap" style="padding-block:clamp(56px,8vw,104px)">' +
@@ -492,7 +495,7 @@
       '<section class="wrap sec-top">' +
         '<h2 class="h2-sm" style="margin-bottom:24px">' + esc(t.galleryTitle) + '</h2>' +
         '<div class="gallery" role="list">' + map(c.gallery, function (g, i) {
-          return '<div role="listitem"><button type="button" data-lb="' + i + '" aria-label="' + esc(t.zoom + ': ' + g) + '"><span class="shot" style="display:grid">screenshot ' + (i + 1) + ' · 1600×1000</span></button>' +
+          return '<div role="listitem"><button type="button" data-lb="' + i + '" aria-label="' + esc(t.zoom + ': ' + g) + '"><span class="shot" style="display:grid"><img src="' + img(p.id, p.shots[i], 'sm') + '" alt="" loading="lazy" width="720" height="371"></span></button>' +
             '<span class="cap">' + esc(g) + '</span></div>';
         }) + '</div>' +
       '</section>' +
@@ -590,7 +593,7 @@
     el.setAttribute('aria-label', caps[lbIndex]);
     el.innerHTML = '<div class="lb-top"><span>' + esc(caps[lbIndex]) + ' <small>' + (lbIndex + 1) + ' / ' + caps.length + '</small></span>' +
       '<button type="button" class="lb-btn lb-x" data-act="lb-close" aria-label="' + esc(t.close) + '">' + ic('close') + '</button></div>' +
-      '<div class="lb-img" data-stop>screenshot ' + (lbIndex + 1) + ' · full size</div>' +
+      '<div class="lb-img" data-stop><img src="' + img(PAGE, product(PAGE).shots[lbIndex]) + '" alt="' + esc(caps[lbIndex]) + '"></div>' +
       '<div class="lb-btns" data-stop><button type="button" class="lb-btn" data-act="lb-prev" aria-label="' + esc(t.prev) + '">' + ic(t.prevIcon) + '</button>' +
       '<button type="button" class="lb-btn" data-act="lb-next" aria-label="' + esc(t.next) + '">' + ic(t.nextIcon) + '</button></div>';
     el.hidden = false;
