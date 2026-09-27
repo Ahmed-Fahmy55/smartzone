@@ -1,227 +1,139 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Shop Management</title>
-<meta name="description" content="Privacy policy for Shop Management, a Windows point-of-sale application. All shop data stays on the user's own computer; optional backups go to the user's own Google Drive.">
-<style>
-  :root {
-    --bg: #ffffff;
-    --surface: #f8fafc;
-    --text: #0f172a;
-    --muted: #64748b;
-    --accent: #2563eb;
-    --border: #e2e8f0;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0f172a;
-      --surface: #1e293b;
-      --text: #f1f5f9;
-      --muted: #94a3b8;
-      --accent: #60a5fa;
-      --border: #334155;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-    line-height: 1.7;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
-  header { border-bottom: 1px solid var(--border); padding-bottom: 24px; margin-bottom: 28px; }
-  h1 { font-size: 1.9rem; margin: 0 0 6px; }
-  h2 { font-size: 1.2rem; margin: 34px 0 10px; }
-  .updated { color: var(--muted); margin: 0; font-size: 0.9rem; }
-  ul { padding-inline-start: 22px; }
-  li { margin-bottom: 8px; }
-  a { color: var(--accent); }
-  code {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 1px 6px;
-    font-size: 0.9em;
-  }
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px 20px;
-    margin: 20px 0;
-  }
-  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
-  th, td { border: 1px solid var(--border); padding: 9px 12px; text-align: left; }
-  th { background: var(--surface); }
-  footer {
-    border-top: 1px solid var(--border);
-    margin-top: 48px;
-    padding-top: 20px;
-    color: var(--muted);
-    font-size: 0.9rem;
-  }
-  .ar { direction: rtl; text-align: right; }
-</style>
+<title>سياسة الخصوصية — Z Shop | سمارت زون</title>
+<meta name="description" content="Privacy policy for Z Shop (Shop Management): data stays on your PC; optional Google Drive backup uses the drive.file scope only.">
+<meta name="sz-title-ar" content="سياسة الخصوصية — Z Shop | سمارت زون">
+<meta name="sz-title-en" content="Privacy Policy — Z Shop | Smart Zone">
+<meta name="theme-color" content="#0D0C0A">
+<script>try{var t=localStorage.getItem('sz-theme');if(t)document.documentElement.setAttribute('data-theme',t);var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('sz-lang');if(l==='en'){document.documentElement.lang='en';document.documentElement.dir='ltr';}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&amp;icon_names=account_balance_wallet,arrow_back,arrow_forward,backup,badge,bar_chart,card_membership,chat,check,check_circle,chevron_left,chevron_right,close,cloud_sync,dark_mode,description,desktop_windows,download,expand_more,fingerprint,fitness_center,folder,groups,inventory_2,key,light_mode,local_shipping,location_on,lock,mail,menu,monitoring,new_releases,palette,payments,point_of_sale,print,qr_code_scanner,redeem,schedule,shield,storefront,system_update,translate,warehouse,warning,wifi_off&amp;display=block">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body>
-<div class="wrap">
-
-  <header>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Shop Management · Last updated 19 September 2026</p>
+<body data-page="privacy-shop" data-root="">
+<header id="site-header" class="site-header"></header>
+<main id="app"><article class="policy" data-screen-label="Privacy">
+  <header id="policy-head">
+    <h1>Privacy Policy — Z Shop (Shop Management)</h1>
+    <p class="meta">Last updated 27 September 2026</p>
   </header>
 
-  <p>
-    Shop Management is a Windows desktop application for running a retail shop. This policy explains
-    what the application accesses, where that data is kept, and what the developer can and cannot
-    see.
-  </p>
-
-  <div class="card">
-    <strong>In short:</strong> your shop's data stays on your own computer. If you turn on backups,
-    copies go to <em>your own</em> Google Drive. The developer receives no data of any kind and has
-    no access to your files.
-  </div>
-
-  <h2>1. Data the application stores</h2>
-  <p>
-    All shop data — products, sales, receipts, stock movements, suppliers, customers, expenses and
-    user accounts — is stored in a database file on the computer where the application is installed,
-    under the Windows user's local application data folder. It is never transmitted to the developer.
-  </p>
-
-  <h2>2. Google Drive backup (optional)</h2>
-  <p>
-    Backing up to Google Drive is off by default. If you enable it and sign in, the application uses
-    the Google Drive API under a single permission scope:
-  </p>
-  <p><code>https://www.googleapis.com/auth/drive.file</code></p>
-  <p>
-    This scope grants access <strong>only to files the application itself creates</strong>. The
-    application cannot see, read, list or modify any other file in your Google Drive — not your
-    documents, photos, or anything created by other applications.
-  </p>
-
-  <table>
-    <tr><th>What</th><th>Detail</th></tr>
-    <tr><td>What is uploaded</td><td>A copy of your shop's own database file</td></tr>
-    <tr><td>Where it goes</td><td>A folder named "Shop Management Backups" in <strong>your own</strong> Google Drive</td></tr>
-    <tr><td>Whose storage is used</td><td>Yours — it counts against your Google account's quota</td></tr>
-    <tr><td>Who can read it</td><td>Only you. The developer has no access</td></tr>
-    <tr><td>Retention</td><td>You choose how many copies to keep; older ones are deleted automatically</td></tr>
-  </table>
-
-  <h2>3. Your Google sign-in</h2>
-  <p>
-    When you link a Google account, Google issues the application an access token. That token is
-    stored <strong>only on your computer</strong>, encrypted using the Windows Data Protection API
-    and tied to your Windows user account. It is not transmitted anywhere, and a copy of the file
-    taken to another machine cannot be decrypted.
-  </p>
-  <p>
-    The application reads your account's email address solely to display which account is linked in
-    its settings screen. This is not stored remotely or shared.
-  </p>
-
-  <h2>4. Network connections</h2>
-  <p>The application makes outbound network requests in exactly two situations:</p>
-  <ul>
-    <li>
-      <strong>Google Drive</strong> — only when you have enabled backups and linked an account, in
-      order to upload or download your backup files.
-    </li>
-    <li>
-      <strong>Update checks</strong> — the application queries the public GitHub releases API to see
-      whether a newer version exists. This request contains no shop data. As with any web request,
-      GitHub will see the originating IP address.
-    </li>
-  </ul>
-  <p>There are no other outbound connections.</p>
-
-  <h2>5. Analytics and tracking</h2>
-  <p>
-    <strong>None.</strong> The application contains no analytics, telemetry, advertising, tracking
-    or crash-reporting services. No usage information is collected or transmitted.
-  </p>
-
-  <h2>6. Data sharing</h2>
-  <p>
-    The developer receives no user data and therefore shares none — with anyone, for any purpose,
-    including advertising, training machine-learning models, or sale to third parties.
-  </p>
-  <p>
-    When you use Google Drive backup, your use of Google's services is governed by
-    <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.
-  </p>
-
-  <h2>7. Your control</h2>
-  <ul>
-    <li>
-      <strong>Disconnect at any time</strong> — the settings screen unlinks the Google account and
-      removes the stored token from your computer.
-    </li>
-    <li>
-      <strong>Revoke access from Google</strong> — visit
-      <a href="https://myaccount.google.com/permissions">your Google account permissions</a> and
-      remove Shop Management.
-    </li>
-    <li>
-      <strong>Delete your backups</strong> — they are ordinary files in your own Drive. Delete them
-      as you would any other file.
-    </li>
-    <li>
-      <strong>Delete local data</strong> — uninstalling the application and deleting its folder in
-      your local application data removes the database.
-    </li>
-  </ul>
-
-  <h2>8. Children</h2>
-  <p>
-    Shop Management is business software intended for use by shop owners and their staff. It is not
-    directed at children.
-  </p>
-
-  <h2>9. Changes to this policy</h2>
-  <p>
-    If this policy changes, the revised version will be published at this address with an updated
-    date at the top.
-  </p>
-
-  <h2>10. Contact</h2>
-  <p>
-    Questions about this policy or about the application:
-    <a href="mailto:ahmedfahmydev55@gmail.com">ahmedfahmydev55@gmail.com</a>
-  </p>
-
-  <hr style="border:0;border-top:1px solid var(--border);margin:44px 0">
-
-  <div class="ar">
+  <div class="ar-sum" dir="rtl" lang="ar">
     <h2>ملخّص بالعربي</h2>
     <ul>
       <li>بيانات المحل كلها محفوظة <strong>على جهازك</strong> ومابتتبعتش لحد.</li>
-      <li>النسخ الاحتياطي على Google Drive <strong>اختياري</strong> ومقفول في الأول.</li>
+      <li>النسخ الاحتياطي على ⁦Google Drive⁩ <strong>اختياري</strong> ومقفول في الأول.</li>
       <li>لما تفعّله، النسخ بتروح على <strong>حساب الدرايف بتاعك انت</strong> وعلى مساحتك.</li>
-      <li>البرنامج شايف <strong>بس الملفات اللي هو رفعها</strong> — مش شايف أي ملف تاني في درايفك.</li>
+      <li>البرنامج شايف <strong>بس الملفات اللي هو رفعها</strong>، مش شايف أي ملف تاني في درايفك.</li>
       <li>مفتاح الدخول بتاع جوجل متخزّن <strong>مشفّر على جهازك</strong> ومربوط بحساب الويندوز بتاعك.</li>
+      <li>لو عندك <strong>إضافة الفروع</strong> ووصّلت الكاشيرات بالسيرفر، بيانات المحل بتتبعت للسيرفر عشان الفروع تتزامن، ومش بتُستخدم في أي حاجة تانية.</li>
       <li><strong>مفيش</strong> تتبّع ولا إحصائيات ولا إعلانات.</li>
-      <li>المطوّر <strong>مابيستقبلش</strong> أي بيانات ومالوش وصول لملفاتك.</li>
-      <li>تقدر تفصل الحساب في أي وقت من الإعدادات، أو تلغي الإذن من
-        <a href="https://myaccount.google.com/permissions">صلاحيات حساب جوجل</a>.</li>
+      <li>تقدر تفصل حساب جوجل في أي وقت من الإعدادات.</li>
     </ul>
-    <p>
-      للتواصل: <a href="mailto:ahmedfahmydev55@gmail.com">ahmedfahmydev55@gmail.com</a>
-    </p>
+    <p>تقدر تلغي الإذن من <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">صلاحيات حساب جوجل</a>. للتواصل: <a href="mailto:ahmedfahmydev55@gmail.com">ahmedfahmydev55@gmail.com</a></p>
   </div>
 
-  <footer>
-    <p><a href="index.html">← Shop Management</a></p>
-    <p>© 2026 Ahmed Fahmy</p>
-  </footer>
+  <h2 id="policy-note" class="policy-note">النص الكامل للسياسة (بالإنجليزي)</h2>
 
-</div>
+  <div class="policy-en" dir="ltr" lang="en">
+    <div class="short"><strong>In short:</strong> your shop's data stays on your own computer. If you turn on backups, copies go to <em>your own</em> Google Drive, and the developer has no access to them. If you use the optional multi-branch add-on, your shop's records are synced through a server only so that your tills and branches share the same data.</div>
+
+    <section>
+      <h2><span>1.</span>Who we are and what this covers</h2>
+      <p>Z Shop (also called Shop Management) is a Windows desktop point-of-sale and inventory application made by Smart Zone. This policy explains what the application accesses, where that data is kept, and what Smart Zone can and cannot see. A separate policy covers <a href="gym/privacy.html">Z Gym</a>.</p>
+    </section>
+
+    <section>
+      <h2><span>2.</span>Data the application stores</h2>
+      <p>All shop data — products, sales, receipts, stock movements, suppliers, customers and their balances, expenses and user accounts — is stored in a database file on the computer where the application is installed, under the Windows user's local application data folder. User PINs are stored as hashes, not as readable text.</p>
+      <p>Unless you use the multi-branch add-on described in section 6, this data never leaves your computer except as backups you choose to make.</p>
+    </section>
+
+    <section>
+      <h2><span>3.</span>Google Drive backup (optional)</h2>
+      <p>Backing up to Google Drive is off by default. If you enable it and sign in, the application uses the Google Drive API under a single permission scope:</p>
+      <code>https://www.googleapis.com/auth/drive.file</code>
+      <p>This scope grants access <strong>only to files the application itself creates</strong>. The application cannot see, read, list or modify any other file in your Google Drive — not your documents, photos, or anything created by other applications.</p>
+      <dl>
+        <div><dt>What is uploaded</dt><dd>A copy of your shop's own database file</dd></div>
+        <div><dt>Where it goes</dt><dd>A folder named “Shop Management Backups” in your own Google Drive</dd></div>
+        <div><dt>Whose storage is used</dt><dd>Yours — it counts against your Google account's quota</dd></div>
+        <div><dt>Who can read it</dt><dd>Only you. Smart Zone has no access</dd></div>
+        <div><dt>Retention</dt><dd>You choose how many copies to keep; older ones are deleted automatically</dd></div>
+      </dl>
+      <p>Z Shop's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Data from your Google account is used only to store and restore your backups, is never transferred to Smart Zone or anyone else, and is never used for advertising.</p>
+    </section>
+
+    <section>
+      <h2><span>4.</span>Your Google sign-in</h2>
+      <p>When you link a Google account, Google issues the application an access token. That token is stored <strong>only on your computer</strong>, encrypted using the Windows Data Protection API and tied to your Windows user account. It is not transmitted anywhere else, and a copy of the file taken to another machine cannot be decrypted.</p>
+      <p>The application reads your account's email address solely to display which account is linked in its settings screen. It is not stored remotely or shared.</p>
+    </section>
+
+    <section>
+      <h2><span>5.</span>Network connections</h2>
+      <p>The application makes outbound network requests only in these situations:</p>
+      <ul>
+        <li><strong>Google Drive</strong> — only when you have enabled backups and linked an account, to upload or download your backup files.</li>
+        <li><strong>Update checks</strong> — the application queries the public GitHub releases API to see whether a newer version exists. This request contains no shop data. As with any web request, GitHub sees the originating IP address.</li>
+        <li><strong>Branch sync</strong> — only if your shop uses the multi-branch add-on and a till has been connected to a sync server (section 6).</li>
+      </ul>
+      <p>Printers and barcode scanners are reached through Windows on your own computer or local network. There are no other outbound connections.</p>
+    </section>
+
+    <section>
+      <h2><span>6.</span>Multi-till and multi-branch sync (optional add-on)</h2>
+      <p>A shop with several tills or branches can subscribe to the sync add-on. It is never active unless a till is connected with a branch key issued for that shop.</p>
+      <p>When it is active, the till sends the shop's records — products, stock and stock transfers, sales, customers and balances, suppliers, expenses and user accounts (with PINs hashed) — over an encrypted HTTPS connection to the shop's sync server, and receives the other branches' records back. The server is operated by Smart Zone on a cloud host, or runs on the shop's own machine if the shop chooses that setup.</p>
+      <p>This data is used only to keep the shop's tills and branches in sync and to restore a till from the server. Smart Zone accesses it only to operate the service or when the shop asks for support, never sells or shares it, and never uses it for advertising. A shop can ask Smart Zone to delete its data from the server at any time.</p>
+    </section>
+
+    <section>
+      <h2><span>7.</span>Analytics and tracking</h2>
+      <p><strong>None.</strong> The application contains no analytics, telemetry, advertising, tracking or crash-reporting services. No usage information is collected or transmitted.</p>
+    </section>
+
+    <section>
+      <h2><span>8.</span>Data sharing</h2>
+      <p>Smart Zone does not sell or share user data with anyone, for any purpose, including advertising, training machine-learning models, or sale to third parties.</p>
+      <p>When you use Google Drive backup, your use of Google's services is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+    </section>
+
+    <section>
+      <h2><span>9.</span>Your control</h2>
+      <ul>
+        <li><strong>Disconnect at any time</strong> — the settings screen unlinks the Google account and removes the stored token from your computer.</li>
+        <li><strong>Revoke access from Google</strong> — visit <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">your Google account permissions</a> and remove Shop Management.</li>
+        <li><strong>Delete your backups</strong> — they are ordinary files in your own Drive. Delete them as you would any other file.</li>
+        <li><strong>Leave the branches</strong> — the settings screen disconnects a till from the sync server, keeping or clearing its local data.</li>
+        <li><strong>Delete local data</strong> — deleting the application and its folder in your local application data removes the database.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span>10.</span>Children</h2>
+      <p>Z Shop is business software intended for shop owners and their staff. It is not directed at children.</p>
+    </section>
+
+    <section>
+      <h2><span>11.</span>Changes to this policy</h2>
+      <p>If this policy changes, the revised version will be published at this address with an updated date at the top.</p>
+    </section>
+
+    <section>
+      <h2><span>12.</span>Contact</h2>
+      <p>Questions about this policy or about the application: <a href="mailto:ahmedfahmydev55@gmail.com">ahmedfahmydev55@gmail.com</a> · WhatsApp <span dir="ltr">01551157197</span>.</p>
+    </section>
+  </div>
+</article>
+</main>
+<footer id="site-footer" class="site-footer"></footer>
+<div id="site-fab"></div>
+<script src="assets/js/site.js"></script>
 </body>
 </html>
