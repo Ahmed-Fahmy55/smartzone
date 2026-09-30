@@ -16,5 +16,6 @@ Plain HTML, CSS and JavaScript — no build step. Open `index.html` through any 
 
 The download buttons point at the latest release of each app:
 
-- Z Shop — <https://github.com/Ahmed-Fahmy55/ShopManagement-Releases/releases>
+- Z Shop — <https://github.com/Ahmed-Fahmy55/ShopManagement-Releases/releases>, and its Android phone app,
+  `ZShop.apk`, which the program's `release.ps1` uploads to the same release (the phone section of `shop/`)
 - Z Gym — <https://github.com/Ahmed-Fahmy55/ZGym-Releases/releases>
