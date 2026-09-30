@@ -267,6 +267,11 @@ img { max-width: 100%; display: block; }
 .mb-cloud { display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-radius: 999px; background: #DDB25A; color: #1A1305; font-weight: 700; font-size: 15px; }
 .mb-cloud .ms { font-size: 22px; }
 .mb-cap { margin: 18px 0 0; font-size: 13px; color: #ADA491; text-align: center; }
+.mb .btn-gold { align-self: flex-start; margin-top: 6px; }
+.mb .phone-note { font-size: 14px; color: #ADA491; }
+.phone-frame { flex: 0 1 280px; min-width: 0; display: flex; justify-content: center; align-items: center; }
+.phone-frame img { width: 100%; max-width: 260px; height: auto; border-radius: 30px; border: 8px solid #2E2920; background: #1F1C15;
+  box-shadow: 0 24px 60px rgba(0,0,0,.45); }
 
 .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .gallery button { width: 100%; padding: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface);

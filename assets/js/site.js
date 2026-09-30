@@ -56,6 +56,8 @@
       featEyebrow: 'المميزات', galleryTitle: 'صور من البرنامج', close: 'إغلاق', prev: 'السابقة', next: 'التالية', zoom: 'تكبير',
       reqTitle: 'المتطلبات', req: ['ويندوز 10 أو 11 (⁦64-bit⁩)', 'من غير تسطيب: ملف واحد تشغّله', 'مش محتاج إنترنت عشان يشتغل'], hwTitle: 'الأجهزة المدعومة',
       addon: 'إضافة مدفوعة', contactWa: 'كلّمنا على واتساب',
+      phonePill: 'تطبيق أندرويد', phoneDl: 'حمّل تطبيق الموبايل', phoneLink: 'تطبيق الموبايل (أندرويد)',
+      phoneNote: 'أندرويد 7 أو أحدث · لو الموبايل سألك، اسمح بتثبيت التطبيقات من المتصفح.',
       guideEyebrow: 'بعد التحميل', guideTitle: 'أول تشغيل في 5 خطوات',
       guide: [
         { t: 'انقل الملف لفولدر ثابت', d: 'انقل ملف البرنامج من ⁦Downloads⁩ لفولدر مش هتمسحه، مثلاً ⁦C:\\Smart Zone⁩، واعمله اختصار على سطح المكتب.' },
@@ -124,6 +126,8 @@
       featEyebrow: 'Features', galleryTitle: 'Screenshots', close: 'Close', prev: 'Previous', next: 'Next', zoom: 'Enlarge',
       reqTitle: 'Requirements', req: ['Windows 10 or 11 (64-bit)', 'No installation, one file', 'No internet needed to run'], hwTitle: 'Supported hardware',
       addon: 'Paid add-on', contactWa: 'Contact us on WhatsApp',
+      phonePill: 'Android app', phoneDl: 'Download the phone app', phoneLink: 'Phone app (Android)',
+      phoneNote: 'Android 7 or later · if your phone asks, allow installing apps from your browser.',
       guideEyebrow: 'After downloading', guideTitle: 'First run in 5 steps',
       guide: [
         { t: 'Move the file to a fixed folder', d: 'For example C:\\Smart Zone, then pin a desktop shortcut.' },
@@ -150,7 +154,7 @@
 
   var PRODUCTS = [
     {
-      id: 'shop', name: 'Z Shop', repo: 'Ahmed-Fahmy55/ShopManagement-Releases', exe: 'ShopManagement.exe', icon: 'storefront', hero: 'dashboard',
+      id: 'shop', name: 'Z Shop', repo: 'Ahmed-Fahmy55/ShopManagement-Releases', exe: 'ShopManagement.exe', apk: 'ZShop.apk', icon: 'storefront', hero: 'dashboard',
       shots: ['pos-cart', 'products', 'lowstock', 'debts', 'stats', 'suppliers'],
       guidePdf: 'docs/ShopManagement-User-Guide.pdf', privacy: 'privacy.html',
       extraDocs: [
@@ -173,6 +177,7 @@
         ],
         hardware: ['طابعات فواتير حرارية 58 و 80 مم', 'قارئ باركود', 'طابعة ليبلز باركود'],
         gallery: ['شاشة البيع', 'المنتجات والمخزون', 'نواقص المخزون', 'مديونية العملاء', 'الإحصائيات', 'حساب المورد'],
+        phone: { title: 'تابع محلك من موبايلك', sub: 'تطبيق ⁦Z Shop⁩ للأندرويد للمدير والمشرفين: المبيعات والمخزون والمديونية والإحصائيات، في أي وقت ومن أي مكان.', alt: 'لوحة المتابعة في تطبيق ⁦Z Shop⁩ على الموبايل', items: ['محل بجهاز واحد: افتح نسخة المحل اللي البرنامج بيرفعها على ⁦Google Drive⁩ وشوف كل الأرقام', 'أكتر من كاشير أو فرع: اربط الموبايل بمفتاح من البرنامج، وتابع كل فرع لوحده أو كلهم مع بعض', 'مع إضافة الفروع، المدير يعدّل من الموبايل: الأسعار، التحصيل من العملاء، الدفع للموردين، المصاريف وتحويلات البضاعة', 'كل واحد يدخل باسمه ورقمه السري، أو بالبصمة'] },
         mb: { title: 'عندك أكتر من فرع؟', sub: 'إضافة الكاشيرات المتعددة والفروع: كذا كاشير في نفس المحل، أو كذا فرع، كلهم متزامنين عن طريق سحابة سمارت زون.', items: ['مخزن رئيسي، وتحويلات بضاعة بين الفروع والمخزن', 'تشوف أي فرع أو كل الفروع مع بعض: الرئيسية، المخزون، المبيعات، المديونيات، المصاريف، الإحصائيات', 'البيع شغّال من غير نت، ويتزامن لما النت يرجع', 'كل فرع بيبيع بس المنتجات اللي عنده', 'لو جهاز ضاع، يترجّع من السيرفر'], branches: ['فرع 1', 'فرع 2', 'فرع 3'], cloud: 'سحابة سمارت زون', warehouse: 'المخزن الرئيسي', caption: 'كل فرع بيبيع أوفلاين ويتزامن لما النت يرجع' }
       },
       en: {
@@ -190,6 +195,7 @@
         ],
         hardware: ['58 / 80 mm thermal receipt printers', 'Barcode scanners', 'Barcode label printers'],
         gallery: ['Selling screen', 'Products and stock', 'Low stock', 'Customer credit', 'Statistics', 'Supplier account'],
+        phone: { title: 'Your shop on your phone', sub: 'The Z Shop Android app for the owner and managers: sales, stock, credit and statistics, any time, from anywhere.', alt: 'The Z Shop phone dashboard', items: ['One till: open the copy the program backs up to Google Drive and see every figure', 'Several tills or branches: pair the phone with a key from the program, and follow one branch or all together', 'With the branches add-on, the owner edits from the phone: prices, customer payments, supplier payments, expenses and stock transfers', 'Everyone signs in with their own PIN, or a fingerprint'] },
         mb: { title: 'Several branches?', sub: 'The multi-till and multi-branch add-on syncs every till and branch through Smart Zone’s cloud.', items: ['Main warehouse and stock transfers', 'See one branch or all together', 'Sells offline, syncs when back online', 'Each branch sells only its own products', 'Restore a lost PC from the server'], branches: ['Branch 1', 'Branch 2', 'Branch 3'], cloud: 'Smart Zone cloud', warehouse: 'Main warehouse', caption: 'Each branch sells offline and syncs later' }
       }
     },
@@ -257,6 +263,7 @@
   var href = function (path) { return ROOT + path; };
   var pageHref = { home: href('') || './', shop: href('shop/'), gym: href('gym/'), contact: href('contact/') };
   var dlUrl = function (p) { return 'https://github.com/' + p.repo + '/releases/latest/download/' + p.exe; };
+  var apkUrl = function (p) { return 'https://github.com/' + p.repo + '/releases/latest/download/' + p.apk; };
   var relUrl = function (p) { return 'https://github.com/' + p.repo + '/releases'; };
   var startUrl = function (p) { return href('download/?app=' + p.id + '&start=1'); };
   var product = function (id) { return PRODUCTS.filter(function (p) { return p.id === id; })[0]; };
@@ -283,7 +290,8 @@
       .then(function (r) { clearTimeout(to); if (!r.ok) throw new Error(String(r.status)); return r.json(); })
       .then(function (j) {
         var a = (j.assets || []).filter(function (x) { return /\.exe$/i.test(x.name); })[0];
-        rel[p.id] = { st: 'ok', tag: j.tag_name, date: j.published_at, size: a ? a.size : null };
+        var apk = p.apk ? (j.assets || []).filter(function (x) { return x.name === p.apk; })[0] : null;
+        rel[p.id] = { st: 'ok', tag: j.tag_name, date: j.published_at, size: a ? a.size : null, apkSize: apk ? apk.size : null };
       })
       .catch(function () { rel[p.id] = { st: 'failed' }; })
       .then(function () { renderRelSlots(); });
@@ -311,6 +319,11 @@
       if (kind === 'line') {
         el.textContent = d.line;
         el.hidden = d.st !== 'ok';
+      } else if (kind === 'apk') {
+        // The phone app's version and size, once the latest release is known to carry it.
+        var r = rel[p.id] || {};
+        el.textContent = r.st === 'ok' && r.apkSize ? r.tag + ' · ' + (r.apkSize / 1048576).toFixed(0) + ' MB' : '';
+        el.hidden = !el.textContent;
       } else {
         if (d.st === 'loading') {
           el.innerHTML = '<div class="dl-skel" role="status" aria-live="polite"><i style="width:64px"></i><i style="width:92px"></i><i style="width:52px"></i><span class="sr-only">' + esc(t.loadingRel) + '</span></div>';
@@ -450,7 +463,8 @@
 
   function productPage(p) {
     var t = T[lang], c = p[lang];
-    var docs = '<a class="link-gold" href="' + href(p.guidePdf) + '">' + ic('description') + esc(t.guidePdf) + '</a>' +
+    var docs = (c.phone && p.apk ? '<a class="link-gold" href="#phone">' + ic('smartphone') + esc(t.phoneLink) + '</a>' : '') +
+      '<a class="link-gold" href="' + href(p.guidePdf) + '">' + ic('description') + esc(t.guidePdf) + '</a>' +
       map(p.extraDocs, function (d) { return '<a class="link-gold" href="' + href(d.href) + '">' + ic('description') + esc(d[lang]) + '</a>'; }) +
       '<a class="link-gold" href="' + relUrl(p) + '" target="_blank" rel="noopener">' + ic('new_releases') + esc(t.allVersions) + '</a>';
 
@@ -465,6 +479,18 @@
           '<div class="mb-line"></div><div class="mb-cloud">' + ic('cloud_sync') + esc(c.mb.cloud) + '</div><div class="mb-line down"></div>' +
           '<div class="mb-node">' + ic('warehouse') + esc(c.mb.warehouse) + '</div><p class="mb-cap">' + esc(c.mb.caption) + '</p>' +
         '</div></div></section>';
+    }
+
+    // The phone app: a plain link to the APK, not the "download started" page, which is about the PC.
+    var phone = '';
+    if (c.phone && p.apk) {
+      phone = '<section id="phone" class="wrap sec-top"><div class="mb">' +
+        '<div class="txt"><span class="pill">' + ic('smartphone') + esc(t.phonePill) + '</span><h2 class="h2">' + esc(c.phone.title) + '</h2><p>' + esc(c.phone.sub) + '</p>' +
+          '<ul class="ticks">' + map(c.phone.items, function (b) { return '<li>' + ic('check') + '<span>' + esc(b) + '</span></li>'; }) + '</ul>' +
+          '<a class="btn btn-gold btn-lg" href="' + apkUrl(p) + '">' + ic('download', 'font-size:22px') + esc(t.phoneDl) + '</a>' +
+          '<p class="phone-note"><span class="ltr" data-rel="' + p.id + '" data-rel-kind="apk" hidden></span> ' + esc(t.phoneNote) + '</p></div>' +
+        '<div class="phone-frame"><img src="' + img(p.id, 'phone') + '" alt="' + esc(c.phone.alt) + '" width="540" height="1200" loading="lazy"></div>' +
+      '</div></section>';
     }
 
     return '' +
@@ -490,6 +516,8 @@
             '<ul class="dots">' + map(f.items, function (it) { return '<li><span>' + esc(it) + '</span></li>'; }) + '</ul></article>';
         }) + '</div>' +
       '</div></section>' +
+
+      phone +
 
       mb +
 
