@@ -45,6 +45,7 @@
         { q: 'البرنامج محتاج إنترنت؟', a: 'لأ. البيع والتقارير وكل حاجة شغّالة من غير نت. النت بيلزم بس للنسخة الاحتياطية على درايف، والتحديثات، ومزامنة الفروع لو عندك الإضافة دي.' },
         { q: 'بياناتي بتروح فين؟', a: 'بتفضل على جهازك انت، وإحنا مابنستقبلش أي بيانات. ولو فعّلت النسخ الاحتياطي، النسخ بتروح على حساب ⁦Google Drive⁩ بتاعك.' },
         { q: 'التجربة المجانية فيها إيه؟', a: '7 أيام بكل المميزات. بعدها البرنامج بيطلب مفتاح تفعيل.' },
+        { q: 'البرنامج بكام؟', a: 'أسعار ⁦Z Shop⁩ في صفحته تحت «الأسعار»: باقة لفرع واحد بالسنة، وباقة لأكتر من فرع بالشهر للفرع. ولـ ⁦Z Gym⁩ كلّمنا على واتساب.' },
         { q: 'التفعيل بيتم إزاي؟', a: 'البرنامج بيطلعلك كود الجهاز. ابعته على واتساب ⁦01551157197⁩ ونبعتلك المفتاح. المفتاح مربوط بالجهاز ده.' },
         { q: 'ويندوز بيقول ⁦Windows protected your PC⁩، أعمل إيه؟', a: 'ده تحذير عادي بيظهر لأي برنامج جديد. اضغط ⁦More info⁩ وبعدين ⁦Run anyway⁩. في صفحة كل برنامج فيه صورة للخطوة دي.' },
         { q: 'بيشتغل على أي ويندوز؟', a: 'ويندوز 10 أو 11 نسخة ⁦64-bit⁩.' }
@@ -115,6 +116,7 @@
         { q: 'Does it need the internet?', a: 'No. Selling and reports work offline. Internet is only used for Drive backup, updates and branch sync.' },
         { q: 'Where is my data?', a: 'On your own PC. We receive nothing. Backups go to your own Google Drive.' },
         { q: 'What is in the free trial?', a: '7 days with every feature. Then the app asks for a licence key.' },
+        { q: 'How much does it cost?', a: 'Z Shop prices are on its page under Pricing: one branch by the year, or several branches per branch per month. For Z Gym, message us on WhatsApp.' },
         { q: 'How do I activate?', a: 'Send the device code shown in the app to WhatsApp 01551157197. The key is tied to that PC.' },
         { q: 'Windows says “Windows protected your PC”', a: 'That is normal for new apps. Click More info, then Run anyway.' },
         { q: 'Which Windows versions?', a: 'Windows 10 or 11, 64-bit.' }
