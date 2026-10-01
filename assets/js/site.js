@@ -55,7 +55,7 @@
       guidePdf: 'دليل الاستخدام (PDF)', allVersions: 'كل الإصدارات والجديد',
       featEyebrow: 'المميزات', galleryTitle: 'صور من البرنامج', close: 'إغلاق', prev: 'السابقة', next: 'التالية', zoom: 'تكبير',
       reqTitle: 'المتطلبات', req: ['ويندوز 10 أو 11 (⁦64-bit⁩)', 'من غير تسطيب: ملف واحد تشغّله', 'مش محتاج إنترنت عشان يشتغل'], hwTitle: 'الأجهزة المدعومة',
-      addon: 'إضافة مدفوعة', contactWa: 'كلّمنا على واتساب',
+      addon: 'إضافة مدفوعة', contactWa: 'كلّمنا على واتساب', pricingLink: 'الأسعار',
       phonePill: 'تطبيق أندرويد', phoneDl: 'حمّل تطبيق الموبايل', phoneLink: 'تطبيق الموبايل (أندرويد)',
       phoneNote: 'أندرويد 7 أو أحدث · لو الموبايل سألك، اسمح بتثبيت التطبيقات من المتصفح.',
       guideEyebrow: 'بعد التحميل', guideTitle: 'أول تشغيل في 5 خطوات',
@@ -125,7 +125,7 @@
       guidePdf: 'User guide (PDF)', allVersions: 'All versions & what’s new',
       featEyebrow: 'Features', galleryTitle: 'Screenshots', close: 'Close', prev: 'Previous', next: 'Next', zoom: 'Enlarge',
       reqTitle: 'Requirements', req: ['Windows 10 or 11 (64-bit)', 'No installation, one file', 'No internet needed to run'], hwTitle: 'Supported hardware',
-      addon: 'Paid add-on', contactWa: 'Contact us on WhatsApp',
+      addon: 'Paid add-on', contactWa: 'Contact us on WhatsApp', pricingLink: 'Pricing',
       phonePill: 'Android app', phoneDl: 'Download the phone app', phoneLink: 'Phone app (Android)',
       phoneNote: 'Android 7 or later · if your phone asks, allow installing apps from your browser.',
       guideEyebrow: 'After downloading', guideTitle: 'First run in 5 steps',
@@ -155,7 +155,9 @@
   var PRODUCTS = [
     {
       id: 'shop', name: 'Z Shop', repo: 'Ahmed-Fahmy55/ShopManagement-Releases', exe: 'ShopManagement.exe', apk: 'ZShop.apk', icon: 'storefront', hero: 'dashboard',
-      shots: ['pos-cart', 'products', 'lowstock', 'debts', 'stats', 'suppliers'],
+      shots: ['pos-cart', 'products', 'debts', 'stats', 'suppliers'],
+      // The prices, in EGP. Every figure on the pricing section comes from here.
+      pricing: { firstYear: 3000, renewal: 1000, trialDays: 7, perBranchMonth: 400, minBranches: 2, setup: 2000, exampleBranches: 3 },
       guidePdf: 'docs/ShopManagement-User-Guide.pdf', privacy: 'privacy.html',
       extraDocs: [
         { href: 'docs/ShopManagement-GoogleDrive-Backup.pdf', ar: 'النسخ الاحتياطي على ⁦Google Drive⁩ (PDF)', en: 'Google Drive backup (PDF)' },
@@ -169,16 +171,30 @@
         featTitle: 'كل اللي المحل محتاجه في مكان واحد',
         features: [
           { icon: 'point_of_sale', t: 'البيع (الكاشير)', items: ['باركود أو بحث أو اختيار من قائمة المنتجات', 'علّق الفاتورة وكمّلها بعدين', 'خصومات، وكاش أو فيزا مع حساب الباقي', 'البيع كله من الكيبورد من غير ماوس', 'بيع بالوزن أو الكسور (كيلو، متر) والسعر بيتحسب لوحده'] },
+          { icon: 'assignment_return', t: 'المرتجعات', items: ['مرتجع جزئي أو كامل لأي فاتورة، بالسبب', 'البضاعة بترجع للرف لوحدها', 'إجمالي الفاتورة بيتعدّل، وجنبه المبلغ اللي اترجع', 'المرتجع بيتخصم من إيراد الشهر'] },
           { icon: 'print', t: 'الطباعة', items: ['فواتير عربي على طابعات 58 و 80 مم', 'حتى الطابعات اللي مفيهاش خط عربي', 'إعادة طباعة أي فاتورة قديمة', 'ليبلز باركود وأسعار، ورول بكذا ستيكر', 'طابعة ليبلز منفصلة'] },
-          { icon: 'inventory_2', t: 'المخزون', items: ['أقسام، واستلام بضاعة', 'تعديل الكمية مع كتابة السبب', 'جرد', 'حركة كاملة لكل صنف', 'تنبيه لما صنف يقرب يخلص أو يخلص'] },
-          { icon: 'account_balance_wallet', t: 'المديونية والموردين والمصاريف', items: ['بيع بالآجل، ورصيد كل زبون، وفلترة بالمنطقة', 'انقل دفتر الديون الورق أو شيت الإكسل مرة واحدة، بالتواريخ', 'حساب كل مورد: مشتريات، مدفوع، باقي', 'مصاريف الشهر (إيجار، كهربا، مرتبات) بتتخصم من صافي الربح'] },
+          { icon: 'inventory_2', t: 'المخزون', items: ['أقسام، وفلاتر زي المقاس والماركة', 'كود ثابت من 10 أرقام لكل صنف، وباركود جاهز للطباعة', 'إضافة مخزون بالتكلفة: لو التوريدة بسعر مختلف تختار متوسط التكلفة أو صنف جديد بسعره', 'تسوية المخزون (جرد أو تالف) بالسبب، وحركة كاملة لكل صنف', 'فلتر النواقص، وعددها ظاهر على تابة المخزون والكمية الناقصة بالأحمر', 'أرشفة الصنف بدل حذفه، وتاريخه بيفضل'] },
+          { icon: 'local_shipping', t: 'الموردين', items: ['حساب كل مورد: مشتريات، مدفوع، باقي', 'كل توريدة بتتسجل على المورد اللي جابها', 'الصنف يتورّد من أكتر من مورد، وصفحته بتوري مين ورّده وبكام وإمتى', 'تقدر تقفل الموردين خالص لو محلك مش محتاجهم'] },
+          { icon: 'account_balance_wallet', t: 'المديونية والمصاريف', items: ['بيع بالآجل، ورصيد كل زبون، وفلترة بالمنطقة', 'انقل دفتر الديون الورق أو شيت الإكسل مرة واحدة، بالتواريخ', 'مصاريف الشهر (إيجار، كهربا، مرتبات) بتتخصم من صافي الربح'] },
           { icon: 'monitoring', t: 'الإحصائيات', items: ['الإيراد والتكلفة والربح وصافي الربح', 'رسم للإيراد اليومي، والأكثر مبيعاً', 'الإيراد حسب القسم، ومقارنة بالشهر اللي فات', 'سجل المبيعات بتفاصيل الدفع، وتصدير ⁦CSV⁩'] },
-          { icon: 'badge', t: 'المستخدمين', items: ['مدير وكاشير، والدخول بـ ⁦PIN⁩', 'لو نسيت ⁦PIN⁩ المدير، ترجّعه بمفتاح من سمارت زون', 'ثيم فاتح أو غامق لكل كاشير'] }
+          { icon: 'badge', t: 'المستخدمين', items: ['مدير وكاشير ومشرف بيتابع من غير ما يعدّل', 'الدخول بـ ⁦PIN⁩، وكل فاتورة باسم الكاشير', 'لو نسيت ⁦PIN⁩ المدير، ترجّعه بمفتاح من سمارت زون', 'ثيم فاتح أو غامق لكل كاشير'] },
+          { icon: 'system_update', t: 'التحديثات والنسخ الاحتياطي', items: ['البرنامج بيعرض كل تحديث جديد وبيتحدث بضغطة', 'نسخة احتياطية كل يوم على ⁦Google Drive⁩ بتاعك', 'ترجيع النسخة على جهاز جديد بضغطة'] }
         ],
         hardware: ['طابعات فواتير حرارية 58 و 80 مم', 'قارئ باركود', 'طابعة ليبلز باركود'],
-        gallery: ['شاشة البيع', 'المنتجات والمخزون', 'نواقص المخزون', 'مديونية العملاء', 'الإحصائيات', 'حساب المورد'],
-        phone: { title: 'تابع محلك من موبايلك', sub: 'تطبيق ⁦Z Shop⁩ للأندرويد للمدير والمشرفين: المبيعات والمخزون والمديونية والإحصائيات، في أي وقت ومن أي مكان.', alt: 'لوحة المتابعة في تطبيق ⁦Z Shop⁩ على الموبايل', items: ['محل بجهاز واحد: افتح نسخة المحل اللي البرنامج بيرفعها على ⁦Google Drive⁩ وشوف كل الأرقام', 'أكتر من كاشير أو فرع: اربط الموبايل بمفتاح من البرنامج، وتابع كل فرع لوحده أو كلهم مع بعض', 'مع إضافة الفروع، المدير يعدّل من الموبايل: الأسعار، التحصيل من العملاء، الدفع للموردين، المصاريف وتحويلات البضاعة', 'كل واحد يدخل باسمه ورقمه السري، أو بالبصمة'] },
-        mb: { title: 'عندك أكتر من فرع؟', sub: 'إضافة الكاشيرات المتعددة والفروع: كذا كاشير في نفس المحل، أو كذا فرع، كلهم متزامنين عن طريق سحابة سمارت زون.', items: ['مخزن رئيسي، وتحويلات بضاعة بين الفروع والمخزن', 'تشوف أي فرع أو كل الفروع مع بعض: الرئيسية، المخزون، المبيعات، المديونيات، المصاريف، الإحصائيات', 'البيع شغّال من غير نت، ويتزامن لما النت يرجع', 'كل فرع بيبيع بس المنتجات اللي عنده', 'لو جهاز ضاع، يترجّع من السيرفر'], branches: ['فرع 1', 'فرع 2', 'فرع 3'], cloud: 'سحابة سمارت زون', warehouse: 'المخزن الرئيسي', caption: 'كل فرع بيبيع أوفلاين ويتزامن لما النت يرجع' }
+        gallery: ['شاشة البيع', 'المخزون', 'مديونية العملاء', 'الإحصائيات', 'حساب المورد'],
+        phone: { title: 'تابع محلك من موبايلك', sub: 'تطبيق ⁦Z Shop⁩ للأندرويد للمدير والمشرفين: المبيعات والمخزون والمديونية والإحصائيات، في أي وقت ومن أي مكان.', alt: 'لوحة المتابعة في تطبيق ⁦Z Shop⁩ على الموبايل', items: ['محل بجهاز واحد: افتح نسخة المحل اللي البرنامج بيرفعها على ⁦Google Drive⁩ وشوف كل الأرقام', 'أكتر من كاشير أو فرع: اربط الموبايل بمفتاح من البرنامج، وتابع كل فرع لوحده أو كلهم مع بعض', 'مع إضافة الفروع، المدير يعدّل من الموبايل: الأصناف والأسعار، إضافة مخزون وجرد، التحصيل من العملاء، الدفع للموردين، المصاريف وتحويلات البضاعة', 'النواقص بضغطة من لوحة المتابعة، وكل صنف بمورديه وحركته', 'كل واحد يدخل باسمه ورقمه السري، أو بالبصمة'] },
+        pricing: {
+          eyebrow: 'الأسعار', title: 'اختار الباقة اللي تناسب محلك', sub: 'الأسعار بالجنيه المصري. جرّب البرنامج 7 أيام ببلاش بكل المميزات قبل ما تدفع.',
+          currency: 'ج.م', free: 'مجاناً', days: 'أيام',
+          single: { name: 'فرع واحد', who: 'محل واحد على جهاز واحد', unit: 'شامل أول سنة', renewal: 'التجديد كل سنة بعد كده', trial: 'تجربة مجانية',
+            items: ['كل مميزات البرنامج اللي فوق', 'بياناتك على جهازك، ومن غير إنترنت خالص', 'نسخة احتياطية على ⁦Google Drive⁩ بتاعك', 'التحديثات والدعم على واتساب طول ما الترخيص سارٍ'] },
+          multi: { name: 'أكتر من فرع', who: 'كل فروعك على سيرفر سمارت زون', unit: 'للفرع في الشهر · بيتدفع سنوي', min: 'أقل عدد فروع', setup: 'تجهيز وتشغيل أول مرة', warehouse: 'المخزن الرئيسي', till: 'جهاز كاشير زيادة في نفس الفرع',
+            items: ['كل اللي في باقة الفرع الواحد، في كل فرع', 'ترخيص البرنامج على أجهزة الفروع داخل الاشتراك', 'مخزن رئيسي وتحويلات بين الفروع', 'تطبيق الموبايل بالتعديل للمدير', 'نسخة من بيانات المحل على السيرفر كل ليلة'] },
+          example: function (n, perYear, setup) { return 'مثال: ' + n + ' فروع = ' + perYear + ' في السنة، و' + setup + ' تجهيز مرة واحدة.'; },
+          note: 'لو ماجدّدتش، بياناتك مش بتتمسح: باقة الفرع الواحد على جهازك، وفي الفروع السيرفر بيوقّف المزامنة بس لحد التجديد.',
+          cta: 'اطلب الباقة على واتساب', wa: 'أهلاً، عايز أشترك في Z Shop. عدد الفروع: '
+        },
+        mb: { title: 'عندك أكتر من فرع؟', sub: 'إضافة الكاشيرات المتعددة والفروع: كذا كاشير في نفس المحل، أو كذا فرع، كلهم متزامنين عن طريق سحابة سمارت زون.', items: ['مخزن رئيسي، وتحويلات بضاعة بين الفروع والمخزن، وكل تحويل بيفتح بالأصناف اللي فيه', 'تشوف أي فرع أو كل الفروع مع بعض: الرئيسية، المخزون، المبيعات، المديونيات، المصاريف، الإحصائيات', 'المنتجات والأسعار والموردين واحدة في كل الفروع، ومدير واحد برقم سري واحد', 'كذا كاشير في الفرع الواحد', 'البيع شغّال من غير نت، ويتزامن لما النت يرجع', 'كل فرع بيبيع بس المنتجات اللي عنده', 'لو جهاز ضاع، يترجّع من السيرفر'], branches: ['فرع 1', 'فرع 2', 'فرع 3'], cloud: 'سحابة سمارت زون', warehouse: 'المخزن الرئيسي', caption: 'كل فرع بيبيع أوفلاين ويتزامن لما النت يرجع' }
       },
       en: {
         kind: 'Shop management', forWho: 'for shops', tagline: 'Point of sale, stock and credit in one app',
@@ -187,16 +203,30 @@
         featTitle: 'Everything a shop needs',
         features: [
           { icon: 'point_of_sale', t: 'Selling (POS)', items: ['Barcode, search or product list', 'Hold and resume carts', 'Discounts; cash or card with change', 'Keyboard-only checkout', 'Sell by weight or fraction (kg, m)'] },
+          { icon: 'assignment_return', t: 'Returns', items: ['Part or all of any sale, with a reason', 'Goods go back on the shelf by themselves', 'The sale shows what came back and its new total', 'Taken off the month’s revenue'] },
           { icon: 'print', t: 'Printing', items: ['Arabic receipts on 58 and 80 mm printers', 'Works on printers without Arabic fonts', 'Reprint any past sale', 'Barcode and price labels, multi-sticker rolls'] },
-          { icon: 'inventory_2', t: 'Stock', items: ['Categories and deliveries', 'Adjustments with a reason', 'Stock-taking and full item history', 'Low and out-of-stock alerts'] },
-          { icon: 'account_balance_wallet', t: 'Credit, suppliers, expenses', items: ['Credit sales, balances, filter by area', 'Import a paper debt book or Excel once', 'Supplier accounts', 'Monthly expenses deducted from net profit'] },
+          { icon: 'inventory_2', t: 'Stock', items: ['Categories and filters such as size and brand', 'A fixed 10-digit code for every item', 'A dearer delivery: average the cost, or keep it as a new item', 'Adjustments with a reason, and full item history', 'Low-stock filter, with the count on the stock tab', 'Archive instead of delete'] },
+          { icon: 'local_shipping', t: 'Suppliers', items: ['Supplier accounts: bought, paid, owed', 'Every delivery filed under who brought it', 'An item from several suppliers, and who supplied it at what cost', 'Switch suppliers off if you do not need them'] },
+          { icon: 'account_balance_wallet', t: 'Credit & expenses', items: ['Credit sales, balances, filter by area', 'Import a paper debt book or Excel once', 'Monthly expenses deducted from net profit'] },
           { icon: 'monitoring', t: 'Statistics', items: ['Revenue, cost, profit, net profit', 'Daily chart, best sellers, by category', 'Month-over-month, CSV export'] },
-          { icon: 'badge', t: 'Users', items: ['Admin and cashier with PIN login', 'Admin PIN recovery key', 'Light or dark theme per till'] }
+          { icon: 'badge', t: 'Users', items: ['Admin, cashier, and a manager who looks without changing', 'PIN login; every sale under its cashier', 'Admin PIN recovery key', 'Light or dark theme per till'] },
+          { icon: 'system_update', t: 'Updates & backup', items: ['New versions offered in the program, one click to update', 'Daily backup to your Google Drive', 'One-click restore on a new PC'] }
         ],
         hardware: ['58 / 80 mm thermal receipt printers', 'Barcode scanners', 'Barcode label printers'],
-        gallery: ['Selling screen', 'Products and stock', 'Low stock', 'Customer credit', 'Statistics', 'Supplier account'],
-        phone: { title: 'Your shop on your phone', sub: 'The Z Shop Android app for the owner and managers: sales, stock, credit and statistics, any time, from anywhere.', alt: 'The Z Shop phone dashboard', items: ['One till: open the copy the program backs up to Google Drive and see every figure', 'Several tills or branches: pair the phone with a key from the program, and follow one branch or all together', 'With the branches add-on, the owner edits from the phone: prices, customer payments, supplier payments, expenses and stock transfers', 'Everyone signs in with their own PIN, or a fingerprint'] },
-        mb: { title: 'Several branches?', sub: 'The multi-till and multi-branch add-on syncs every till and branch through Smart Zone’s cloud.', items: ['Main warehouse and stock transfers', 'See one branch or all together', 'Sells offline, syncs when back online', 'Each branch sells only its own products', 'Restore a lost PC from the server'], branches: ['Branch 1', 'Branch 2', 'Branch 3'], cloud: 'Smart Zone cloud', warehouse: 'Main warehouse', caption: 'Each branch sells offline and syncs later' }
+        gallery: ['Selling screen', 'Stock', 'Customer credit', 'Statistics', 'Supplier account'],
+        phone: { title: 'Your shop on your phone', sub: 'The Z Shop Android app for the owner and managers: sales, stock, credit and statistics, any time, from anywhere.', alt: 'The Z Shop phone dashboard', items: ['One till: open the copy the program backs up to Google Drive and see every figure', 'Several tills or branches: pair the phone with a key from the program, and follow one branch or all together', 'With the branches add-on, the owner edits from the phone: items and prices, adding and counting stock, customer payments, supplier payments, expenses and stock transfers', 'Low stock in one tap from the dashboard, and every item with its suppliers and history', 'Everyone signs in with their own PIN, or a fingerprint'] },
+        pricing: {
+          eyebrow: 'Pricing', title: 'Pick the plan that fits your shop', sub: 'Prices in Egyptian pounds. Try every feature free for 7 days before you pay.',
+          currency: 'EGP', free: 'Free', days: 'days',
+          single: { name: 'One branch', who: 'One shop on one PC', unit: 'first year included', renewal: 'Yearly renewal after that', trial: 'Free trial',
+            items: ['Every feature above', 'Your data on your PC, no internet needed', 'Backup to your own Google Drive', 'Updates and WhatsApp support while the licence runs'] },
+          multi: { name: 'Several branches', who: 'All your branches on the Smart Zone server', unit: 'per branch per month · billed yearly', min: 'Minimum branches', setup: 'One-time setup', warehouse: 'Main warehouse', till: 'Extra till in a branch',
+            items: ['Everything in One branch, at every branch', 'The program licence on branch PCs is included', 'Main warehouse and transfers between branches', 'The phone app with editing for the owner', 'A nightly copy of the shop’s data on the server'] },
+          example: function (n, perYear, setup) { return 'Example: ' + n + ' branches = ' + perYear + ' a year, plus ' + setup + ' one-time setup.'; },
+          note: 'If you do not renew, nothing is deleted: one branch keeps its data on its PC, and with branches the server only pauses syncing until you renew.',
+          cta: 'Ask for a plan on WhatsApp', wa: 'Hi, I want to subscribe to Z Shop. Branches: '
+        },
+        mb: { title: 'Several branches?', sub: 'The multi-till and multi-branch add-on syncs every till and branch through Smart Zone’s cloud.', items: ['Main warehouse and stock transfers, each opened with what it carried', 'See one branch or all together', 'One catalogue, one price list, one admin PIN for every branch', 'Several tills in one branch', 'Sells offline, syncs when back online', 'Each branch sells only its own products', 'Restore a lost PC from the server'], branches: ['Branch 1', 'Branch 2', 'Branch 3'], cloud: 'Smart Zone cloud', warehouse: 'Main warehouse', caption: 'Each branch sells offline and syncs later' }
       }
     },
     {
@@ -463,7 +493,8 @@
 
   function productPage(p) {
     var t = T[lang], c = p[lang];
-    var docs = (c.phone && p.apk ? '<a class="link-gold" href="#phone">' + ic('smartphone') + esc(t.phoneLink) + '</a>' : '') +
+    var docs = (c.pricing ? '<a class="link-gold" href="#pricing">' + ic('sell') + esc(t.pricingLink) + '</a>' : '') +
+      (c.phone && p.apk ? '<a class="link-gold" href="#phone">' + ic('smartphone') + esc(t.phoneLink) + '</a>' : '') +
       '<a class="link-gold" href="' + href(p.guidePdf) + '">' + ic('description') + esc(t.guidePdf) + '</a>' +
       map(p.extraDocs, function (d) { return '<a class="link-gold" href="' + href(d.href) + '">' + ic('description') + esc(d[lang]) + '</a>'; }) +
       '<a class="link-gold" href="' + relUrl(p) + '" target="_blank" rel="noopener">' + ic('new_releases') + esc(t.allVersions) + '</a>';
@@ -493,6 +524,8 @@
       '</div></section>';
     }
 
+    var pricing = c.pricing && p.pricing ? pricingSection(p, c.pricing, p.pricing) : '';
+
     return '' +
       '<section class="wrap hero product" data-screen-label="' + p.name + '">' +
         '<div class="hero-copy" style="gap:20px">' +
@@ -520,6 +553,8 @@
       phone +
 
       mb +
+
+      pricing +
 
       '<section class="wrap sec-top">' +
         '<h2 class="h2-sm" style="margin-bottom:24px">' + esc(t.galleryTitle) + '</h2>' +
@@ -549,6 +584,37 @@
       '</div></section>' +
 
       '<div class="lb" id="lb" role="dialog" aria-modal="true" hidden></div>';
+  }
+
+  // Two plans side by side: one branch bought by the year, several branches by the month on the server.
+  function pricingSection(p, l, n) {
+    var money = function (v) { return '<span class="ltr">' + v.toLocaleString('en-US') + '</span> ' + esc(l.currency); };
+    var bigMoney = function (v) { return '<b class="ltr">' + v.toLocaleString('en-US') + '</b><em>' + esc(l.currency) + '</em>'; };
+    var row = function (k, v) { return '<div class="plan-row"><span>' + esc(k) + '</span><b>' + v + '</b></div>'; };
+    var ticks = function (items) { return '<ul class="ticks">' + map(items, function (b) { return '<li>' + ic('check') + '<span>' + esc(b) + '</span></li>'; }) + '</ul>'; };
+    var perYear = n.perBranchMonth * 12 * n.exampleBranches;
+
+    return '<section id="pricing" class="wrap sec-top">' +
+      '<div class="sec-head"><span class="eyebrow">' + esc(l.eyebrow) + '</span><h2 class="h2">' + esc(l.title) + '</h2><p class="sec-sub">' + esc(l.sub) + '</p></div>' +
+      '<div class="plans">' +
+        '<article class="plan">' +
+          '<div class="plan-h"><span class="ibox">' + ic('storefront') + '</span><div><h3>' + esc(l.single.name) + '</h3><p>' + esc(l.single.who) + '</p></div></div>' +
+          '<div class="plan-price">' + bigMoney(n.firstYear) + '<span>' + esc(l.single.unit) + '</span></div>' +
+          '<div class="plan-rows">' + row(l.single.renewal, money(n.renewal)) + row(l.single.trial, '<span class="ltr">' + n.trialDays + '</span> ' + esc(l.days)) + '</div>' +
+          ticks(l.single.items) +
+        '</article>' +
+        '<article class="plan plan-gold">' +
+          '<div class="plan-h"><span class="ibox">' + ic('cloud_sync') + '</span><div><h3>' + esc(l.multi.name) + '</h3><p>' + esc(l.multi.who) + '</p></div></div>' +
+          '<div class="plan-price">' + bigMoney(n.perBranchMonth) + '<span>' + esc(l.multi.unit) + '</span></div>' +
+          '<div class="plan-rows">' + row(l.multi.min, '<span class="ltr">' + n.minBranches + '</span>') + row(l.multi.setup, money(n.setup)) +
+            row(l.multi.warehouse, esc(l.free)) + row(l.multi.till, esc(l.free)) + '</div>' +
+          ticks(l.multi.items) +
+          '<p class="plan-example">' + esc(l.example(n.exampleBranches, (perYear).toLocaleString('en-US') + ' ' + l.currency, n.setup.toLocaleString('en-US') + ' ' + l.currency)) + '</p>' +
+        '</article>' +
+      '</div>' +
+      '<p class="plan-note">' + esc(l.note) + '</p>' +
+      '<a class="btn btn-wa btn-lg plan-cta" href="' + wa(l.wa) + '" target="_blank" rel="noopener">' + ic('chat', 'font-size:22px') + esc(l.cta) + '</a>' +
+    '</section>';
   }
 
   function smartScreen(p) {
