@@ -160,7 +160,7 @@
       shots: ['pos-cart', 'products', 'debts', 'stats', 'suppliers'],
       // The prices, in EGP. Every figure on the pricing section comes from here.
       pricing: { firstYear: 3000, renewal: 1000, trialDays: 7, perBranchMonth: 400, minBranches: 2, setup: 2000, exampleBranches: 3 },
-      guidePdf: 'docs/ShopManagement-User-Guide.pdf', privacy: 'privacy.html',
+      guidePdf: 'docs/ShopManagement-User-Guide.pdf?v=4.7.0', privacy: 'privacy.html',
       extraDocs: [
         { href: 'docs/ShopManagement-GoogleDrive-Backup.pdf', ar: 'النسخ الاحتياطي على ⁦Google Drive⁩ (PDF)', en: 'Google Drive backup (PDF)' },
         { href: 'docs/ShopManagement-Excel-Import.pdf', ar: 'استيراد المديونية من ⁦Excel⁩ (PDF)', en: 'Excel debt import (PDF)' },
